@@ -81,17 +81,10 @@
 
       <div id="coverage" class="coverage"></div>
 
-      <h3 style="margin-top:28px">Vertailu kuukausi- ja päivätasolla</h3>
-      <div class="tabs">
-        <button class="tab-btn active" data-target="monthly-pane" type="button">Kuukausittain</button>
-        <button class="tab-btn"        data-target="daily-pane"   type="button">Päivittäin</button>
-      </div>
-      <div id="monthly-pane" class="tab-pane">
-        <div class="chart-wrap"><canvas id="monthly-chart"></canvas></div>
-      </div>
-      <div id="daily-pane" class="tab-pane hidden">
-        <div class="chart-wrap"><canvas id="daily-chart"></canvas></div>
-      </div>
+      <h3 style="margin-top:28px">Vertailu kuukausi-, päivä- ja tuntitasolla</h3>
+      <nav id="breadcrumb" class="breadcrumb"></nav>
+      <p id="chart-hint" class="chart-hint"></p>
+      <div class="chart-wrap"><canvas id="main-chart"></canvas></div>
     </section>
 
     <div id="debug"></div>
