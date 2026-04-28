@@ -65,11 +65,20 @@ async function bootstrap() {
 
 function setupDragDrop() {
   const dz = $("dropzone");
+
+  // Block the browser's default behaviour of navigating to a dropped
+  // file anywhere on the page (not just the dropzone).
+  ["dragenter", "dragover", "dragleave", "drop"].forEach((ev) => {
+    document.addEventListener(ev, (e) => e.preventDefault());
+  });
+
+  // Visual feedback only on the dropzone itself.
   ["dragenter", "dragover"].forEach((ev) =>
-    dz.addEventListener(ev, (e) => { e.preventDefault(); dz.classList.add("hover"); }));
-  ["dragleave", "drop"].forEach((ev) =>
-    dz.addEventListener(ev, (e) => { e.preventDefault(); dz.classList.remove("hover"); }));
+    dz.addEventListener(ev, () => dz.classList.add("hover")));
+  dz.addEventListener("dragleave", () => dz.classList.remove("hover"));
+
   dz.addEventListener("drop", (e) => {
+    dz.classList.remove("hover");
     const f = e.dataTransfer?.files?.[0];
     if (f) loadFile(f);
   });
