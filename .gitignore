@@ -1,0 +1,22 @@
+# Käyttäjän omaa dataa — EI siirretä julkiseen repoon
+/consumption.csv
+*.consumption.csv
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Apple Pages dokumentit (esim. ChatGPT-kommentit)
+*.pages
+
+# Aiempia testiartefakteja
+/scripts/test_bash.txt
+/scripts/test2.txt
+/test_sync.txt

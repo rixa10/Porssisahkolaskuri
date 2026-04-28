@@ -1,0 +1,10 @@
+{
+  "totalKwh": 48.0,
+  "totalSpotCost": 8.8544,
+  "totalFixedCost": 8.08,
+  "weightedAvgSpot": 18.446667,
+  "difference": -0.7744,
+  "months": 1,
+  "includedRows": 192,
+  "skippedNoPriceRows": 0
+}
